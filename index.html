@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="fr">
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Are you the word Master</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     </head>
-    <body>
-        <div>TODO write content</div>
+
+    <!-- directive ng-app indique l'emplacement de notre code angularjs -->
+    <!-- Ici on indique a la directive le module a utiliser  -->
+    <body ng-app="wordApp" >
+        <div class="navbar navbar-default" >
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">AngularJs</a>
+        </div>
+        </div>
+
+        <!-- permet d'injecter une variable dans le scope a l'initialisation-->
+        <!--<div ng-init="users=['Marc','Jean','Jhon']">
+            {{users}}
+        </div>-->
+
+        <div ng-show="loading">Chargement...</div>
+        <div class="container" ng-view></div>
+
+        <!-- librairie Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.3.14/angular-route.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
